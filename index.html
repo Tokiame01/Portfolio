@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Leong Chee Keong: projects, skills and contact details.">
+  <title>Leong Chee Keong | Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div id="progress" aria-hidden="true"></div>
+
+  <header>
+    <a class="brand" href="#home">Leong Chee Keong</a>
+    <nav aria-label="Main navigation">
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navList">Menu</button>
+      <ul id="navList">
+        <li><a href="#home" aria-current="location">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeBtn" type="button" aria-pressed="false" hidden>Dark theme</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="home" aria-labelledby="homeTitle">
+      <p id="greeting" class="greeting">Welcome to my portfolio.</p>
+      <h1 id="homeTitle">Hi, I'm Leong Chee Keong</h1>
+      <p id="tagline" class="tagline">
+        <span class="sr-only">A Student currently studying at University Malaysia Sarawak. I have experiences in building small system and application, and I keep learning new things.</span>
+        <span id="typedText" aria-hidden="true">A Student currently studying at University Malaysia Sarawak. I have experiences in building small system and application, and I keep learning new things.</span>
+      </p>
+      <a class="btn" href="#projects">See my work</a>
+    </section>
+
+    <section id="projects" aria-labelledby="projectsTitle">
+      <h2 id="projectsTitle" class="reveal">Projects</h2>
+      <p class="reveal">A selection of my projects and the ideas behind them.</p>
+      <div id="filters" class="filters" role="group" aria-label="Filter projects" hidden>
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="Website" aria-pressed="false">Website</button>
+        <button type="button" data-filter="System" aria-pressed="false">System</button>
+        <button type="button" data-filter="Application" aria-pressed="false">Application</button>
+      </div>
+      <p id="projectCount" class="muted" role="status" aria-atomic="true"></p>
+      <div class="grid" id="projectGrid"></div>
+      <noscript><p>Enable JavaScript to view and filter the project cards.</p></noscript>
+    </section>
+
+    <section id="about" aria-labelledby="aboutTitle">
+      <h2 id="aboutTitle" class="reveal">About Me</h2>
+      <p class="reveal">I am a student studying Network Computing, and curious about Artificial Intellgence as it is hot topic. I enjoy making things that are easy to use.</p>
+      <p class="reveal">I am a person who willing to learn, improve and get a good result in my work and also my life. I wish to get experiences in every environment, as it may led me to success.</p>
+    </section>
+
+    <section id="skills" aria-labelledby="skillsTitle">
+      <h2 id="skillsTitle" class="reveal">Skills</h2>
+      <p class="reveal">The technologies and topics I am developing through my studies and projects.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>HTML</h3>
+          <p>Structuring web pages with headings, navigation, links, and labelled forms.</p>
+        </article>
+        <article class="card">
+          <h3>CSS</h3>
+          <p>Styling web pages with responsive layouts, grids, colours, and visible focus states.</p>
+        </article>
+        <article class="card">
+          <h3>JavaScript</h3>
+          <p>Practising events, project filtering, and input validation.</p>
+        </article>
+        <article class="card">
+          <h3>C++</h3>
+          <p>Develop applications, services and tools.</p>
+        </article>
+        <article class="card">
+          <h3>SQL</h3>
+          <p>Learning to retrive data and insert data, set up a database with good structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contactTitle">
+      <h2 id="contactTitle" class="reveal">Contact</h2>
+      <p class="contact-line">
+        <span id="emailLink">104740@siswa.unimas.my</span>
+        <button id="copyEmail" type="button" hidden>Copy email</button>
+        <span id="copyStatus" role="status" aria-atomic="true"></span>
+      </p>
+
+      <p id="formHelp" class="muted">Use the email link above to contact me or you may send me a message through the form.</p>
+      <form id="contactForm" aria-describedby="formHelp">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError" aria-invalid="false">
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError" aria-invalid="false">
+        <span class="error" id="emailError"></span>
+
+        <label for="message">Message</label>
+        <span id="messageHelp" class="muted">Enter 10 to 300 characters.</span>
+        <textarea id="message" name="message" rows="4" minlength="10" maxlength="300" required aria-describedby="messageHelp count messageError" aria-invalid="false"></textarea>
+        <span class="counter" id="count">0 / 300</span>
+        <span class="error" id="messageError"></span>
+
+        <button id="checkMessage" type="submit" class="btn" disabled>Check message</button>
+        <p id="formStatus" role="status" aria-atomic="true"></p>
+        <noscript><p>Enable JavaScript to check your entries, or use the email link.</p></noscript>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year">2026</span> Leong Chee Keong</p>
+  </footer>
+
+  <button id="toTop" type="button" hidden aria-label="Back to top">&uarr;</button>
+</body>
+</html>
