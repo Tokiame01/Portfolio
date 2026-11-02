@@ -146,7 +146,7 @@ function initForm() {
       status.textContent = 'Please correct the highlighted fields.';
       fields[firstInvalid].focus();
     } else {
-      status.textContent = 'Your entries are valid. No message was sent. Use the email link above to contact me.';
+      status.textContent = 'Your entries are valid and this is a front-end only website so no message was send. Use the email link above to contact me.';
       // Keep the message available so the visitor can copy it into an email.
     }
   });
